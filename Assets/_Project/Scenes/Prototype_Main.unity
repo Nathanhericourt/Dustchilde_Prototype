@@ -1138,7 +1138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   cameraTransform: {fileID: 330585546}
-  interactPromptObject: {fileID: 933091251}
+  interactPromptObject: {fileID: 1282678824}
   interactPromptText: {fileID: 1282678826}
 --- !u!1 &1282678824
 GameObject:
