@@ -530,6 +530,7 @@ MonoBehaviour:
   repeatDialogueLines:
   - '"...We already talked about this."'
   turnDuration: 0.8
+  npcForwardOffset: 270
 --- !u!64 &140515529
 MeshCollider:
   m_ObjectHideFlags: 0

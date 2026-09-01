@@ -46,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Prevent an initial mouse-delta spike from snapping the camera on the first frame
+        lookInput = Vector2.zero;
+        cameraPitch = 0f;
+        cameraTransform.localRotation = Quaternion.identity;
     }
 
     private void Update()
@@ -84,5 +89,15 @@ public class PlayerMovement : MonoBehaviour
         }
         verticalVelocity += gravity * Time.deltaTime;
         controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
+    }
+
+    public float CameraPitch
+    {
+        get => cameraPitch;
+        set
+        {
+            cameraPitch = Mathf.Clamp(value, -maxLookAngle, maxLookAngle);
+            cameraTransform.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
+        }
     }
 }

@@ -14,15 +14,17 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
     [Header("Face-to-Face")]
     [SerializeField] private float turnDuration = 0.8f;
+    [SerializeField] private float npcForwardOffset = 0f; // adjust if model doesn't face its own +Z
 
     private bool hasSpokenBefore;
     private bool isTurning;
     private Transform playerTransform;
+    private PlayerMovement playerMovement;
 
     private void Awake()
     {
-        PlayerMovement player = FindAnyObjectByType<PlayerMovement>();
-        if (player != null) playerTransform = player.transform;
+        playerMovement = FindAnyObjectByType<PlayerMovement>();
+        if (playerMovement != null) playerTransform = playerMovement.transform;
     }
 
     public void Interact()
@@ -41,30 +43,50 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     private IEnumerator FaceToFaceThenTalk()
     {
         isTurning = true;
-        DialogueManager.Instance.LockInteraction(); // freeze player during the turn itself
+        DialogueManager.Instance.LockInteraction();
 
-        Quaternion playerStartRot = playerTransform.rotation;
-        Quaternion npcStartRot = transform.rotation;
+        // Preserve each object's original tilt (X/Z) - only change yaw (Y)
+        Vector3 playerStartEuler = playerTransform.eulerAngles;
+        Vector3 npcStartEuler = transform.eulerAngles;
 
         Vector3 toNpc = transform.position - playerTransform.position;
         toNpc.y = 0f;
-        Quaternion playerTargetRot = toNpc.sqrMagnitude > 0.001f ? Quaternion.LookRotation(toNpc) : playerStartRot;
+        float playerTargetYaw = toNpc.sqrMagnitude > 0.001f
+            ? Quaternion.LookRotation(toNpc).eulerAngles.y
+            : playerStartEuler.y;
 
         Vector3 toPlayer = -toNpc;
-        Quaternion npcTargetRot = toPlayer.sqrMagnitude > 0.001f ? Quaternion.LookRotation(toPlayer) : npcStartRot;
+        float npcTargetYaw = toPlayer.sqrMagnitude > 0.001f
+            ? Quaternion.LookRotation(toPlayer).eulerAngles.y + npcForwardOffset
+            : npcStartEuler.y;
+
+        Quaternion playerStartRot = playerTransform.rotation;
+        Quaternion npcStartRot = transform.rotation;
+        Quaternion playerTargetRot = Quaternion.Euler(playerStartEuler.x, playerTargetYaw, playerStartEuler.z);
+        Quaternion npcTargetRot = Quaternion.Euler(npcStartEuler.x, npcTargetYaw, npcStartEuler.z);
+
+        float startPitch = playerMovement != null ? playerMovement.CameraPitch : 0f;
+        const float targetPitch = 0f; // level, eye-line straight ahead
 
         float elapsed = 0f;
         while (elapsed < turnDuration)
         {
             elapsed += Time.deltaTime;
             float t = elapsed / turnDuration;
+
             playerTransform.rotation = Quaternion.Slerp(playerStartRot, playerTargetRot, t);
             transform.rotation = Quaternion.Slerp(npcStartRot, npcTargetRot, t);
+
+            if (playerMovement != null)
+                playerMovement.CameraPitch = Mathf.Lerp(startPitch, targetPitch, t);
+
             yield return null;
         }
 
         playerTransform.rotation = playerTargetRot;
         transform.rotation = npcTargetRot;
+        if (playerMovement != null) playerMovement.CameraPitch = targetPitch;
+
         isTurning = false;
 
         string[] linesToUse = (hasSpokenBefore && repeatDialogueLines.Length > 0)
