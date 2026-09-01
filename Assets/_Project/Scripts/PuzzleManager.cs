@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
-using System.Linq;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -12,10 +11,10 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI statusText;
 
     [Header("Puzzle Setup")]
-    [Tooltip("The correct order items must be clicked in, using their Item ID.")]
     [SerializeField] private string[] correctOrder;
 
     private List<string> playerOrder = new List<string>();
+    private List<PuzzleItem> correctlySelectedItems = new List<PuzzleItem>();
     private bool puzzleSolved;
 
     private void Awake()
@@ -34,22 +33,23 @@ public class PuzzleManager : MonoBehaviour
         UpdateStatusText();
     }
 
-    public void SubmitItem(string itemId, string displayLabel)
+    public void SubmitItem(PuzzleItem item, string itemId, string displayLabel)
     {
         if (puzzleSolved) return;
 
         playerOrder.Add(itemId);
         int index = playerOrder.Count - 1;
 
-        // Wrong item at this point in the sequence
         if (index >= correctOrder.Length || playerOrder[index] != correctOrder[index])
         {
-            Debug.Log($"Wrong order! Reset. You picked: {displayLabel}");
-            playerOrder.Clear();
+            item.FlashWrong();
+            ResetPuzzleAttempt();
             UpdateStatusText("Wrong order - try again!");
             return;
         }
 
+        item.MarkCorrect();
+        correctlySelectedItems.Add(item);
         UpdateStatusText($"Selected: {string.Join(", ", playerOrder)}");
 
         if (playerOrder.Count == correctOrder.Length)
@@ -58,6 +58,16 @@ public class PuzzleManager : MonoBehaviour
             UpdateStatusText("Puzzle Solved!");
             Debug.Log("Puzzle solved correctly!");
         }
+    }
+
+    private void ResetPuzzleAttempt()
+    {
+        playerOrder.Clear();
+        foreach (var item in correctlySelectedItems)
+        {
+            item.ResetHighlight();
+        }
+        correctlySelectedItems.Clear();
     }
 
     private void UpdateStatusText(string overrideMessage = null)

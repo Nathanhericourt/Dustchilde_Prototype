@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsInteractionLocked)
         {
             return; // freeze player while talking
         }

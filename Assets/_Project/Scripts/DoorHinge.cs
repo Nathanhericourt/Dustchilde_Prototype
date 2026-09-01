@@ -4,19 +4,19 @@ using System.Collections;
 public class DoorHinge : MonoBehaviour, IInteractable
 {
     [Header("Door Settings")]
-    [SerializeField] private Transform doorPivot; // the object that actually rotates (parent of model + collider)
+    [SerializeField] private Transform doorPivot;
     [SerializeField] private float openAngle = 90f;
     [SerializeField] private float openDuration = 1f;
 
-    private bool isOpen;
+    private bool hasOpened;
     private Coroutine rotateRoutine;
 
     public void Interact()
     {
-        isOpen = !isOpen;
+        if (hasOpened) return; // already open - do nothing further
 
-        float targetY = isOpen ? openAngle : 0f;
-        Quaternion targetRotation = Quaternion.Euler(0f, targetY, 0f);
+        hasOpened = true;
+        Quaternion targetRotation = Quaternion.Euler(0f, openAngle, 0f);
 
         if (rotateRoutine != null) StopCoroutine(rotateRoutine);
         rotateRoutine = StartCoroutine(RotateTo(targetRotation));
@@ -40,6 +40,6 @@ public class DoorHinge : MonoBehaviour, IInteractable
 
     public string GetInteractPrompt()
     {
-        return isOpen ? "Press to close door" : "Press to open door";
+        return hasOpened ? "" : "Press to open door";
     }
 }

@@ -16,9 +16,11 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsDialogueActive => dialogueActive;
 
+    // Covers BOTH the turning phase and active dialogue - player movement checks this
+    public bool IsInteractionLocked { get; private set; }
+
     private void Awake()
     {
-        // Simple singleton so any NPC can call DialogueManager.Instance
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -27,9 +29,20 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
     }
 
+    public void LockInteraction()
+    {
+        IsInteractionLocked = true;
+    }
+
+    public void UnlockInteraction()
+    {
+        IsInteractionLocked = false;
+    }
+
     public void StartDialogue(string speakerName, string[] lines)
     {
         dialogueActive = true;
+        IsInteractionLocked = true;
         dialoguePanel.SetActive(true);
         speakerNameText.text = speakerName;
 
@@ -56,6 +69,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueActive = false;
+        IsInteractionLocked = false;
         dialoguePanel.SetActive(false);
     }
 }
