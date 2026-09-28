@@ -37,7 +37,7 @@ public class ObjectiveManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -51,7 +51,7 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     // Call this each time the player does something that counts (picks up an item, etc.)
-    private void AddProgress()
+    public void AddProgress()
     {
         if (allComplete || steps.Length == 0) return;
 
