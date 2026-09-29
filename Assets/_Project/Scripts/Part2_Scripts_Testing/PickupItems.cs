@@ -1,19 +1,26 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PickupItem : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string itemName = "Item";
+    [SerializeField] private string itemName = "BrassKey";
 
-    [Tooltip("Runs when the item is picked up. Drag in ObjectiveManager > AddProgress to count it.")]
+    [Tooltip("Optional events: e.g., ObjectiveManager.Instance.AddProgress()")]
     [SerializeField] private UnityEvent onPickUp;
 
     public void Interact()
     {
-        Debug.Log($"Picked up: {itemName}");
-        onPickUp.Invoke();
-        gameObject.SetActive(false); // Item disappears when picked up
+        // Add item to player inventory
+        if (InventoryManager.Instance != null)
+        {
+            InventoryManager.Instance.AddItem(itemName);
+        }
+
+        // Fire any extra events
+        onPickUp?.Invoke();
+
+        // Hide item from world
+        gameObject.SetActive(false);
     }
 
     public string GetInteractPrompt()

@@ -55,6 +55,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Pause check to prevent cam/player movement during pause
+        if (DialogueManager.Instance != null && GameManager.Instance.isPaused)
+        {
+            return;
+        }
+
         if (DialogueManager.Instance != null && DialogueManager.Instance.IsInteractionLocked)
         {
             return; // freeze player while talking
