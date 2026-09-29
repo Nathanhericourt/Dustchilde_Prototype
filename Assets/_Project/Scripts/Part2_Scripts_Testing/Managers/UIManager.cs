@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -9,12 +10,14 @@ public class UIManager : MonoBehaviour
     public GameObject inventoryPanel;
 
     [Header("Inventory Display")]
-    public TMP_Text inventoryText; // Assign a UI Text element to lisy items
+    public TMP_Text inventoryText; // Assign a UI Text element to list items
 
     void Update()
     {
+        if (Keyboard.current == null) return;
+
         // Toggle Pause Menu with ESC
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (settingsPanel.activeSelf)
             {
@@ -29,7 +32,7 @@ public class UIManager : MonoBehaviour
         }
 
         // Toggle Inventory UI with 'I'
-        if (Input.GetKeyDown(KeyCode.I) && !GameManager.Instance.isPaused)
+        if (Keyboard.current.iKey.wasPressedThisFrame && !GameManager.Instance.isPaused)
         {
             ToggleInventory();
         }
@@ -54,7 +57,6 @@ public class UIManager : MonoBehaviour
 
     public void CloseSettings()
     {
-        settingsPanel.SetActive(true);
         pausePanel.SetActive(true);
         settingsPanel.SetActive(false);
     }

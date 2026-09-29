@@ -2456,7 +2456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20cd87c3002b4574fb7872c4011ec25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  pausePanel: {fileID: 4877821047502783168}
+  pausePanel: {fileID: 6363548726159172649}
   settingsPanel: {fileID: 6394731577518608204}
   inventoryPanel: {fileID: 3275388005058431583}
   inventoryText: {fileID: 1060817117701224824}
@@ -5151,9 +5151,21 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5702284328309763759, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702284328309763759, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702284328309763759, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 870674659}
+    - target: {fileID: 5702284328309763759, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5702284328309763759, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePauseMenu
@@ -5523,6 +5535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &6363548726159172649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6266506361126215006, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 1060817117701224823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6394731577518608204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6198749626980660795, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
