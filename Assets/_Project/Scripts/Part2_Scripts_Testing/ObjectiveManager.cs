@@ -34,6 +34,7 @@ public class ObjectiveManager : MonoBehaviour
     private bool allComplete;
 
     public bool AllComplete => allComplete;
+    public int CurrentStepIndex => currentStepIndex;
 
     private void Awake()
     {
