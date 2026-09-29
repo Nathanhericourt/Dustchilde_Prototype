@@ -1,16 +1,40 @@
 using UnityEngine;
 
-public class PuzzleDoor : MonoBehaviour
+public class PuzzleDoor : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private string requiredItem = "BrassKey";
+    [SerializeField] private string lockedMessage = "Door is locked. Requires key.";
+
+    private bool isUnlocked = false;
+
+    public void Interact()
     {
-        
+        if (isUnlocked) return;
+
+        // Check inventory for item
+        if (InventoryManager.Instance != null && InventoryManager.Instance.HasItem(requiredItem))
+        {
+            isUnlocked = true;
+            Debug.Log($"Door unlocked using {requiredItem}");
+
+            // Opene/Hide door object
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log($"Door locked! You need: {requiredItem}");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public string GetInteractPrompt()
     {
-        
+        if (isUnlocked) return "";
+
+        if (InventoryManager.Instance != null && InventoryManager.Instance.HasItem(requiredItem))
+        {
+            return $"Press E to unlock door with {requiredItem}";
+        }
+
+        return lockedMessage;
     }
 }
