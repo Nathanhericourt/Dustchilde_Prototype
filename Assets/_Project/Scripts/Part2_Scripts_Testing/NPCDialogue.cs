@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class NPCDialogue : MonoBehaviour, IInteractable
 {
@@ -15,6 +16,10 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     [Header("Face-to-Face")]
     [SerializeField] private float turnDuration = 0.8f;
     [SerializeField] private float npcForwardOffset = 0f; // adjust if model doesn't face its own +Z
+
+    [Header("On Conversation Finished")]
+    [Tooltip("Runs every time this NPC's dialogue finishes (initial or repeat). Drag in a DoorHinge > Unlock() to gate a door behind this conversation.")]
+    [SerializeField] private UnityEvent onDialogueComplete;
 
     private bool hasSpokenBefore;
     private bool isTurning;
@@ -95,7 +100,7 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
         hasSpokenBefore = true;
 
-        DialogueManager.Instance.StartDialogue(speakerName, linesToUse);
+        DialogueManager.Instance.StartDialogue(speakerName, linesToUse, () => onDialogueComplete.Invoke());
     }
 
     public string GetInteractPrompt()

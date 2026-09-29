@@ -8,11 +8,19 @@ public class DoorHinge : MonoBehaviour, IInteractable
     [SerializeField] private float openAngle = 90f;
     [SerializeField] private float openDuration = 1f;
 
+    [Header("Lock")]
+    [Tooltip("If true, this door won't open until Unlock() is called (e.g. from an NPC's On Dialogue Complete event).")]
+    [SerializeField] private bool startsLocked = false;
+    [SerializeField] private string lockedPrompt = "It's locked...";
+
+    private bool isLocked;
+
     private bool hasOpened;
     private Coroutine rotateRoutine;
 
     public void Interact()
     {
+        if (isLocked) return;
         if (hasOpened) return; // already open - do nothing further
 
         hasOpened = true;
@@ -40,6 +48,17 @@ public class DoorHinge : MonoBehaviour, IInteractable
 
     public string GetInteractPrompt()
     {
+        if (isLocked) return lockedPrompt;
         return hasOpened ? "" : "Press to open door";
+    }
+
+    private void Awake()
+    {
+        isLocked = startsLocked;
+    }
+
+    public void Unlock()
+    {
+        isLocked = false;
     }
 }

@@ -39,12 +39,14 @@ public class DialogueManager : MonoBehaviour
         IsInteractionLocked = false;
     }
 
-    public void StartDialogue(string speakerName, string[] lines)
+    private System.Action onDialogueFinished;
+    public void StartDialogue(string speakerName, string[] lines, System.Action onFinished = null)
     {
         dialogueActive = true;
         IsInteractionLocked = true;
         dialoguePanel.SetActive(true);
         speakerNameText.text = speakerName;
+        onDialogueFinished = onFinished;
 
         lineQueue.Clear();
         foreach (string line in lines)
@@ -71,5 +73,8 @@ public class DialogueManager : MonoBehaviour
         dialogueActive = false;
         IsInteractionLocked = false;
         dialoguePanel.SetActive(false);
+
+        onDialogueFinished?.Invoke();
+        onDialogueFinished = null;
     }
 }

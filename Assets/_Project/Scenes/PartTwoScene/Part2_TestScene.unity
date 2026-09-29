@@ -2777,6 +2777,8 @@ MonoBehaviour:
   doorPivot: {fileID: 1400626179}
   openAngle: 90
   openDuration: 1
+  startsLocked: 1
+  lockedPrompt: It's locked...
 --- !u!65 &1110846699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2982,7 +2984,7 @@ Transform:
   m_GameObject: {fileID: 1147292199}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -12}
+  m_LocalPosition: {x: 1, y: 1, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5391,6 +5393,34 @@ PrefabInstance:
     - target: {fileID: 5251556266052508194, guid: 847f59ec311e8324ba9719e569797444, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1110846698}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorHinge, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424333841954333161, guid: 847f59ec311e8324ba9719e569797444, type: 3}
+      propertyPath: onDialogueComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
