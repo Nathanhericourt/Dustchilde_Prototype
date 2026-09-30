@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CrowdMoveTrigger : MonoBehaviour, IInteractable
 {
+    [Header("On Used")]
+    [Tooltip("Runs after this trigger's crowd(s) have moved. Drag in a DoorHinge > Unlock() here if this should unlock something.")]
+    [SerializeField] private UnityEvent onUsed;
     [SerializeField] private string itemName = "Item";
 
     [Header("Crowd Members")]
@@ -23,6 +27,7 @@ public class CrowdMoveTrigger : MonoBehaviour, IInteractable
         }
 
         Debug.Log($"Crowd trigger used: {itemName}. Moved {count} crowd members.");
+        onUsed.Invoke();
 
         gameObject.SetActive(false);
     }
