@@ -5038,6 +5038,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2960980190969483978, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3945262851203400583, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5116,6 +5120,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3945262851203400583, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999058791522914112, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4832841851630018371, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
