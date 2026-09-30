@@ -1665,7 +1665,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
 --- !u!65 &634518087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2907,7 +2907,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
 --- !u!65 &1018224113
 BoxCollider:
   m_ObjectHideFlags: 0

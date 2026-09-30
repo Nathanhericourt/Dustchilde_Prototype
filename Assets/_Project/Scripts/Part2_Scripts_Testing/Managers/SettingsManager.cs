@@ -33,7 +33,15 @@ public class SettingsManager : MonoBehaviour
             sfxVolumeSlider.minValue = 0f;
             sfxVolumeSlider.maxValue = 1f;
             sfxVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
-            sfxVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+            sfxVolumeSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+        }
+
+        if (musicVolumeSlider != null && AudioManager.Instance != null)
+        {
+            musicVolumeSlider.minValue = 0f;
+            musicVolumeSlider.maxValue = 1f;
+            musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+            musicVolumeSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
         }
 
     }
@@ -44,7 +52,7 @@ public class SettingsManager : MonoBehaviour
             playerMovement.MouseSensitivity = value;
     }
 
-    private void OnSFXVolumeChnaged(float value)
+    private void OnSFXVolumeChanged(float value)
     {
         AudioManager.Instance?.SetSFXVolume(value);
     }
