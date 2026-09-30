@@ -8,9 +8,13 @@ public class PickupItem : MonoBehaviour, IInteractable
     [Tooltip("Runs when the item is picked up. Drag in ObjectiveManager > AddProgress to count it.")]
     [SerializeField] private UnityEvent onPickUp;
 
+    [SerializeField] private AudioClip pickupSound;
+
     public void Interact()
     {
         Debug.Log($"Picked up: {itemName}");
+
+        if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX(pickupSound);
 
         // Add inventory
         if (InventoryManager.Instance != null)
