@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(gameObject);
+            return;
         }
+        Instance = this;
     }
 
     // Pauses/UnPaused the game

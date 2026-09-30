@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Pause check to prevent cam/player movement during pause
-        if (DialogueManager.Instance != null && GameManager.Instance.isPaused)
+        if (GameManager.Instance != null && GameManager.Instance.isPaused)
         {
             return;
         }
@@ -105,5 +105,11 @@ public class PlayerMovement : MonoBehaviour
             cameraPitch = Mathf.Clamp(value, -maxLookAngle, maxLookAngle);
             cameraTransform.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
         }
+    }
+
+    public float MouseSensitivity
+    {
+        get => mouseSensitivity;
+        set => mouseSensitivity = value;
     }
 }

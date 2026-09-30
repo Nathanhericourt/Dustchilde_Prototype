@@ -57,6 +57,7 @@ public class PlayerInteractor : MonoBehaviour
 
     private void TryInteract()
     {
+        if (GameManager.Instance != null && GameManager.Instance.isPaused) return;
         currentInteractable?.Interact();
     }
 

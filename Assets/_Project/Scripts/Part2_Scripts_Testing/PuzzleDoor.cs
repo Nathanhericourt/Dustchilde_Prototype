@@ -32,7 +32,7 @@ public class PuzzleDoor : MonoBehaviour, IInteractable
 
         if (InventoryManager.Instance != null && InventoryManager.Instance.HasItem(requiredItem))
         {
-            return $"Press E to unlock door with {requiredItem}";
+            return $"Press to unlock door with {requiredItem}";
         }
 
         return lockedMessage;

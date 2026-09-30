@@ -1,9 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using System.Security.Cryptography.X509Certificates;
-using System.Data;
-using Unity.VisualScripting;
 
 public class CrowdPuzzleStation : MonoBehaviour, IInteractable
 {

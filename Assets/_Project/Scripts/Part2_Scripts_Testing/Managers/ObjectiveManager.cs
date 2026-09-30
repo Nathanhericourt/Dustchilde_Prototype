@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
-using System.Runtime.Serialization;
 
 public class ObjectiveManager : MonoBehaviour
 {
