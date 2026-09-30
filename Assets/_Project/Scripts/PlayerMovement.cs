@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxLookAngle = 85f;
     [SerializeField] private Transform cameraTransform;
 
+    [Header("Animation")]
+    [SerializeField] private Animator animator;
+
     private CharacterController controller;
     private PlayerControls controls;
 
@@ -95,6 +98,12 @@ public class PlayerMovement : MonoBehaviour
         }
         verticalVelocity += gravity * Time.deltaTime;
         controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
+
+        if (animator != null)
+        {
+            float speed = moveInput.magnitude;
+            animator.SetFloat("Speed", speed);
+        }
     }
 
     public float CameraPitch

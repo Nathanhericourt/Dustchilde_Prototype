@@ -10,9 +10,20 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource musicSource;
 
+    [Header("Background Msuic")]
+    [SerializeField] private AudioClip backgroundMusic;
+
     [Header("Volume (0 to 1)")]
     [Range(0f, 1f)] [SerializeField] private float sfxVolume = 1f;
     [Range(0f, 1f)] [SerializeField] private float musicVolume = 0.5f;
+
+    private void Start()
+    {
+        if (backgroundMusic != null)
+        {
+            PlayMusic(backgroundMusic);
+        }    
+    }
 
     private void Awake()
     {
