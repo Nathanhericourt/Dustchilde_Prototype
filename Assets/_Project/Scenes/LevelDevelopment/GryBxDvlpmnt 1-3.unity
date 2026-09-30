@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.36
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 40814cc12d6ec4448a87adeb68c50985, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f2b5f3f20933f434e850db1b710542fd, type: 2}
   m_HaloStrength: 0.207
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -5767,8 +5767,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 57.544827, y: 10.04, z: 21.281155}
-  m_BoxOffset: {x: -3.9436932, y: 0, z: 5.6405773}
+  m_BoxSize: {x: 57.544827, y: 10.04, z: 17.6}
+  m_BoxOffset: {x: -3.9436932, y: 0, z: 4.6920285}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -5794,7 +5794,7 @@ Transform:
   m_GameObject: {fileID: 1130959900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.86, z: 0}
+  m_LocalPosition: {x: 0, y: 1.86, z: 6.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6194,7 +6194,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 1
-  m_Color: {r: 1, g: 0.8055602, b: 0.16509432, a: 1}
+  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
   m_Intensity: 0.2
   m_Range: 147.41475
   m_SpotAngle: 59.63577
@@ -6245,7 +6245,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
   m_ShapeRadius: 0.025
-  m_ShadowAngle: 0
+  m_ShadowAngle: 3.6
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
@@ -10533,7 +10533,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2933654941719894813, guid: 241222ea2b2f0a440a6f59e5f17e16a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.641806
+      value: -18.12
       objectReference: {fileID: 0}
     - target: {fileID: 2933654941719894813, guid: 241222ea2b2f0a440a6f59e5f17e16a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10541,7 +10541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933654941719894813, guid: 241222ea2b2f0a440a6f59e5f17e16a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.1568
+      value: -30.08
       objectReference: {fileID: 0}
     - target: {fileID: 2933654941719894813, guid: 241222ea2b2f0a440a6f59e5f17e16a0, type: 3}
       propertyPath: m_LocalRotation.w
