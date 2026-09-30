@@ -22,11 +22,11 @@ public class ObjectiveManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI objectiveText;
 
-    [Header("Objective Steps (played in order)")]
+    [Header("Objective Steps")]
     [SerializeField] private ObjectiveStep[] steps;
 
-    [Header("When every step is done")]
-    [SerializeField] private string allCompleteText = "";
+    [Header("Completion")]
+    [SerializeField] private string allCompleteText = "All objectives complete.";
 
     private int currentStepIndex;
     private int currentProgress;
@@ -47,13 +47,17 @@ public class ObjectiveManager : MonoBehaviour
 
     private void Start()
     {
+        currentStepIndex = 0;
+        currentProgress = 0;
+
         ShowCurrentStep();
     }
 
     // Call this each time the player does something that counts (picks up an item, etc.)
     public void AddProgress()
     {
-        if (allComplete || steps.Length == 0) return;
+        if (allComplete || steps == null || steps.Length == 0) 
+            return;
 
         currentProgress++;
         ObjectiveStep step = steps[currentStepIndex];
@@ -71,13 +75,16 @@ public class ObjectiveManager : MonoBehaviour
     // Call this to finish the current step straight away (for steps with Progress Needed = 0)
     public void CompleteCurrentStep()
     {
-        if (allComplete || steps.Length == 0) return;
+        if (allComplete || steps == null || steps.Length == 0) 
+            return;
 
         ObjectiveStep finishedStep = steps[currentStepIndex];
 
         // Move on to the next step first, then run the finished step's events
         currentStepIndex++;
         currentProgress = 0;
+
+        finishedStep.onStepComplete?.Invoke();
 
         if (currentStepIndex >= steps.Length)
         {
@@ -89,19 +96,27 @@ public class ObjectiveManager : MonoBehaviour
             ShowCurrentStep();
         }
 
-        finishedStep.onStepComplete.Invoke();
+    }
+
+    public bool IsCurrentStep(int index)
+    {
+        return !allComplete && currentStepIndex == index;
     }
 
     private void ShowCurrentStep()
     {
-        if (objectiveText == null || steps.Length == 0) return;
+        if (objectiveText == null || steps == null || steps.Length == 0) return;
 
         ObjectiveStep step = steps[currentStepIndex];
 
         if (step.progressNeeded > 0)
+        {
             objectiveText.text = $"{step.description} ({currentProgress}/{step.progressNeeded})";
+        }
         else
+        {
             objectiveText.text = step.description;
+        }
     }
 
 }
