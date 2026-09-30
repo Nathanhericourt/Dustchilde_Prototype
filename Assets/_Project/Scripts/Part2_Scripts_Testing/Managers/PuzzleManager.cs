@@ -57,6 +57,11 @@ public class PuzzleManager : MonoBehaviour
             puzzleSolved = true;
             UpdateStatusText("Puzzle Solved!");
             Debug.Log("Puzzle solved correctly!");
+
+            if (ObjectiveManager.Instance != null)
+            {
+                ObjectiveManager.Instance.CompleteCurrentStep();
+            }
         }
     }
 
