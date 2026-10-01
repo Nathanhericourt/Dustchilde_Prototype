@@ -319,7 +319,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8562970}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -680,7 +680,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 25215230}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2973,7 +2973,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 422237089}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -3532,7 +3532,7 @@ Transform:
   m_GameObject: {fileID: 536043342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.234, y: 0, z: -3.478}
+  m_LocalPosition: {x: -23.87, y: 2.34, z: 3.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3662,7 +3662,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 551460172}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -3911,7 +3911,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 556357439}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -5219,7 +5219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2003033560998825401, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: openAngle
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2003033560998825401, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: startsLocked
@@ -5945,7 +5945,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 873074710}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -6194,7 +6194,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 896427703}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -7724,7 +7724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1107139929}
-  - component: {fileID: 1107139930}
+  - component: {fileID: 1107139931}
   m_Layer: 0
   m_Name: Crowd Three
   m_TagString: Untagged
@@ -7756,7 +7756,7 @@ Transform:
   - {fileID: 1995853831}
   m_Father: {fileID: 292367539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1107139930
+--- !u!114 &1107139931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7765,10 +7765,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107139928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8ff72d844fcf04689c7f58c7d53352, type: 3}
+  m_Script: {fileID: 11500000, guid: 10b4f414e18d84640b38774128169e82, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SlideMover
-  moveDuration: 1.5
+  m_EditorClassIdentifier: Assembly-CSharp::CrowdNavGroup
+  spreadRadius: 1.5
 --- !u!1 &1109624588
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,7 +8132,7 @@ Transform:
   m_GameObject: {fileID: 1149932786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.46, y: 0, z: -2.01}
+  m_LocalPosition: {x: -27.34, y: 2.34, z: 4.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8262,7 +8262,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1152429932}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -10240,7 +10240,7 @@ GameObject:
   - component: {fileID: 1420463404}
   - component: {fileID: 1420463403}
   - component: {fileID: 1420463402}
-  - component: {fileID: 1420463401}
+  - component: {fileID: 1420463405}
   m_Layer: 0
   m_Name: Knife_Crowdtwo_Pickup
   m_TagString: Untagged
@@ -10263,38 +10263,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389117123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1420463401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420463399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa9bbb6edab26e48bd0ea23bb10ee7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrowdMoveTrigger
-  onUsed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 827722416}
-        m_TargetAssemblyTypeName: DoorHinge, Assembly-CSharp
-        m_MethodName: Unlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  itemName: Knife
-  targetMovers:
-  - {fileID: 1107139930}
-  targetDestinations:
-  - {fileID: 536043343}
 --- !u!65 &1420463402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10373,6 +10341,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420463399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1420463405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420463399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc30fab1ee201a74ab02e54acd280d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrowdNavMoveTrigger
+  itemName: Knife
+  targetGroups:
+  - {fileID: 1107139931}
+  targetDestinations:
+  - {fileID: 536043343}
+  pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
+  onUsed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1431406527
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,7 +10934,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1515016814}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -12361,7 +12350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1708572297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12776,7 +12765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799774524}
-  - component: {fileID: 1799774525}
+  - component: {fileID: 1799774526}
   m_Layer: 0
   m_Name: Crowd One
   m_TagString: Untagged
@@ -12801,7 +12790,7 @@ Transform:
   - {fileID: 422237090}
   m_Father: {fileID: 292367539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1799774525
+--- !u!114 &1799774526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12810,10 +12799,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799774523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8ff72d844fcf04689c7f58c7d53352, type: 3}
+  m_Script: {fileID: 11500000, guid: 10b4f414e18d84640b38774128169e82, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SlideMover
-  moveDuration: 1.5
+  m_EditorClassIdentifier: Assembly-CSharp::CrowdNavGroup
+  spreadRadius: 1.5
 --- !u!1001 &1812612052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13167,7 +13156,7 @@ GameObject:
   - component: {fileID: 1919638931}
   - component: {fileID: 1919638930}
   - component: {fileID: 1919638929}
-  - component: {fileID: 1919638932}
+  - component: {fileID: 1919638933}
   m_Layer: 0
   m_Name: Cake_CrowdOne_Pickup
   m_TagString: Untagged
@@ -13268,7 +13257,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919638927}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1919638932
+--- !u!114 &1919638933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13277,17 +13266,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919638927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aa9bbb6edab26e48bd0ea23bb10ee7d, type: 3}
+  m_Script: {fileID: 11500000, guid: dc30fab1ee201a74ab02e54acd280d2f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CrowdMoveTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::CrowdNavMoveTrigger
+  itemName: Cake
+  targetGroups:
+  - {fileID: 1799774526}
+  targetDestinations:
+  - {fileID: 1149932787}
+  pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
   onUsed:
     m_PersistentCalls:
       m_Calls: []
-  itemName: Cake
-  targetMovers:
-  - {fileID: 1799774525}
-  targetDestinations:
-  - {fileID: 1149932787}
 --- !u!1 &1932010055
 GameObject:
   m_ObjectHideFlags: 0
@@ -13855,7 +13845,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1995853830}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -14213,7 +14203,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2048265312}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.5
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50

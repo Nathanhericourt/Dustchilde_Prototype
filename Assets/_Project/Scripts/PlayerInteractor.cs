@@ -43,6 +43,7 @@ public class PlayerInteractor : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
         {
+
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
                 currentInteractable = interactable;
@@ -50,7 +51,7 @@ public class PlayerInteractor : MonoBehaviour
                 return;
             }
         }
-
+        
         currentInteractable = null;
         HidePrompt();
     }
