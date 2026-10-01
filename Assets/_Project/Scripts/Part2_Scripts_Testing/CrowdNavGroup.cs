@@ -19,7 +19,7 @@ public class CrowdNavGroup : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            if (agents[i] != null) continue;
+            if (agents[i] == null) continue;
             
             // Spread each person around the destination in a circle instead of one exact point
             float angle = (360f / count) * i;
