@@ -14668,7 +14668,7 @@ MonoBehaviour:
   dialogueLines: []
   repeatDialogueLines: []
   turnDuration: 0.8
-  npcForwardOffset: 270
+  npcForwardOffset: 0
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls:

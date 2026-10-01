@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,9 @@ public class LevelEndTrigger : MonoBehaviour
 
     [Tooltip("Exact name of the scene to load, e.g. 'Part2_TestScene'. Must be added to Build Settings.")]
     [SerializeField] private string nextSceneName;
+
+    [Tooltip("Time to wait in seconds before loading the next scene.")]
+    [SerializeField] private float transitionDelay = 2.0f;
 
     private bool hasTriggered;
 
@@ -32,5 +36,12 @@ public class LevelEndTrigger : MonoBehaviour
         {
             Debug.Log("Level End reached (no next scene yet).");
         }
+    }
+
+    private IEnumerator LoadSceneWithDelay()
+    {
+        yield return new WaitForSeconds(transitionDelay);
+
+        SceneManager.LoadScene(nextSceneName);
     }
 }
