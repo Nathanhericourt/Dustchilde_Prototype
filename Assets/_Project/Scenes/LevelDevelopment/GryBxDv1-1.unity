@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &11163171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &245514701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &372369504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2421,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: cc555de50ff51a64aac19c4c88c39bdb, type: 2}
   m_InitialState: 1
-  m_WrapMode: 0
+  m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -2433,6 +2433,8 @@ PlayableDirector:
     value: {fileID: 1274588697}
   - key: {fileID: 8460398796430272159, guid: cc555de50ff51a64aac19c4c88c39bdb, type: 2}
     value: {fileID: 1884163272}
+  - key: {fileID: 6836654571385930661, guid: cc555de50ff51a64aac19c4c88c39bdb, type: 2}
+    value: {fileID: 2030330864}
   m_ExposedReferences:
     m_References:
     - aaba0df553e0f2e44a3cf1902c825406: {fileID: 1231930710}
@@ -6768,7 +6770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1231930710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7100,7 +7102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1306403086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10627,7 +10629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1455646619583760156, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_Depth
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1455646619583760156, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: field of view
