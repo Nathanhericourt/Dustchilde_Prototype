@@ -3,7 +3,17 @@ guid: 17b82b6c3e0bbbd4eadaf875b582523f
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Couch velvet
+    second: {fileID: 2100000, guid: 3a8bb677fc59a8f459672cf7469ba532, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Couch.002
+    second: {fileID: 2100000, guid: 8a8b7f6183321a94ca8ab4e0b287f0ba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

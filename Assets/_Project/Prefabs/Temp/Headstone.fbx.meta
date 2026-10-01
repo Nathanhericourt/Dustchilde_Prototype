@@ -3,7 +3,22 @@ guid: ed31ad732e4811443bf65bb764cdeae7
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower holder
+    second: {fileID: 2100000, guid: e45070a79d27f0c428439af0730bc6f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower holder gaps
+    second: {fileID: 2100000, guid: 8a47b544119a5d843baca5d44b68ade2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: 01472fc032103c64895f44c065dd53f7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

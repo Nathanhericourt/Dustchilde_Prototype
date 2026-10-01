@@ -3,7 +3,22 @@ guid: 93d8b1a3d2e48574d83ead5962b16169
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fridge
+    second: {fileID: 2100000, guid: cd142298c0a727240aa857c11afb9e74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lining
+    second: {fileID: 2100000, guid: 26898151f5bebca42bd5c52d8ff81a39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 26970eb641def934d87f22481ec2840e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

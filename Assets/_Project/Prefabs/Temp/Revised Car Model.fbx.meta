@@ -3,7 +3,32 @@ guid: f6abc31b1249bc64e90f91819d2d18b2
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 08d5555c423b47a488a0f5f713cb8749, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rims
+    second: {fileID: 2100000, guid: 6dbc31881fe93164780556803cc1f6a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steering housing
+    second: {fileID: 2100000, guid: 8597b021d0e876e42833a25508596e05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steering wheel
+    second: {fileID: 2100000, guid: b8bf9ca953f67ad49ae9788aea1be7b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows.001
+    second: {fileID: 2100000, guid: fb26c901863e64549aadca1384f7839a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
