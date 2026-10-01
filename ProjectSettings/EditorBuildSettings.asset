@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/_Project/Scenes/MainMenu.unity
+    guid: 6d4e24718dd3c2d41ad9b1c7eedad5d7
+  - enabled: 1
     path: Assets/_Project/Scenes/LevelDevelopment/GryBxDv1-1.unity
     guid: 15dbe484dece55b4c8d32cf96916e981
   - enabled: 1
