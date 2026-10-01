@@ -371,7 +371,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ed31ad732e4811443bf65bb764cdeae7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 173481012}
+      addedObject: {fileID: 173481015}
   m_SourcePrefab: {fileID: 100100000, guid: ed31ad732e4811443bf65bb764cdeae7, type: 3}
 --- !u!4 &173481010 stripped
 Transform:
@@ -383,8 +383,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ed31ad732e4811443bf65bb764cdeae7, type: 3}
   m_PrefabInstance: {fileID: 173481009}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &173481012
-BoxCollider:
+--- !u!64 &173481015
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -401,9 +401,103 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.019999996, y: 0.0142308595, z: 0.16413577}
-  m_Center: {x: -6.0714236e-17, y: -0.0028845703, z: 0.08218651}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: ed31ad732e4811443bf65bb764cdeae7, type: 3}
+--- !u!1001 &380416748
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 681611958890584701, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: itemName
+      value: Dead Flowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 681611958890584701, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
+    - target: {fileID: 681611958890584701, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2049829587}
+    - target: {fileID: 681611958890584701, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: onPickUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AddProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513936907163473663, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.448
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.207
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.59296244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.59296244
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38522145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.38522145
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -113.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977318063177873221, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432291313742416325, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
+      propertyPath: m_Name
+      value: DeadFlowers_Pickup_Generic
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: add25399cb6bdfb4dbf9534b5ca4d2c6, type: 3}
 --- !u!1 &392213695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2253,7 @@ PrefabInstance:
       objectReference: {fileID: 691053912}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: allCompleteText
-      value: ' '
+      value: Leave the Graveyard
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.size
@@ -2167,15 +2261,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].description
-      value: Walk to the grave
+      value: Walk to the grave and pick up the dead flowers
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].description
-      value: 
+      value: Leave graveyard
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].progressNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].progressNeeded
@@ -2194,15 +2288,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2049829587}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2049829587}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -2211,14 +2313,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: AddProgress
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ObjectiveManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ObjectiveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5243290701151351870, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -2328,3 +2438,4 @@ SceneRoots:
   - {fileID: 392213696}
   - {fileID: 804231624}
   - {fileID: 883192572}
+  - {fileID: 380416748}
