@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections.Generic;
 
@@ -19,6 +20,8 @@ public class DialogueManager : MonoBehaviour
     // Covers BOTH the turning phase and active dialogue - player movement checks this
     public bool IsInteractionLocked { get; private set; }
 
+    private System.Action onDialogueFinished;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,6 +30,14 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         Instance = this;
+    }
+
+    private void Update()
+    {
+        if (dialogueActive && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            DisplayNextLine();
+        }
     }
 
     public void LockInteraction()
@@ -39,7 +50,6 @@ public class DialogueManager : MonoBehaviour
         IsInteractionLocked = false;
     }
 
-    private System.Action onDialogueFinished;
     public void StartDialogue(string speakerName, string[] lines, System.Action onFinished = null)
     {
         dialogueActive = true;

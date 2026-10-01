@@ -3208,7 +3208,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: nextSceneName
-      value: GryBxDvlpmnt 1-3
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5984629218155701089, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: m_LocalScale.x
@@ -5223,7 +5223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3215044592077676724, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3606976429180030637, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5299,7 +5299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8363100693454565100, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11609,7 +11609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a49825f4548d8f94997c73d3d20b5ae2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14474,7 +14474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a49825f4548d8f94997c73d3d20b5ae2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
