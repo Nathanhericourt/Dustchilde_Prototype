@@ -6972,7 +6972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].progressNeeded
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.size
