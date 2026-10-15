@@ -3053,7 +3053,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163750801}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 13
   m_Type: 0
   m_Color: {r: 1, g: 0.9399938, b: 0.5424528, a: 1}
@@ -3096,7 +3096,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -3628,23 +3628,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   speakerName: Vin
   dialogueLines:
-  - '*Jacob is lost in thought, his head lays low as if holding a heavy weight. He
-    is so lost within himself that it is only upon touching his shoulder that he
-    comes back to reality*'
-  - '"Mr. Beller! S-shorry, I didn''t mean to ignore you... just struggling being
-    here right now."'
-  - '"Seeing all of these people in here, it''s making me on edge so I''m trying
-    to hide from it."'
-  - '"... Sir if you don''t mind I''d like to talk to you about something. It''s
-    about Duncan..."'
-  - '"I have been holding secrets about Duncan for a long time now to protect him,
-    but after everything that has happened I can''t hold it back anymore." '
-  - '"I really want to tell you this, but all of these ears around, I don''t want
-    something overhear us and spread lies about my friend."'
-  - '"Could we go outside please? It''s the only place I don''t have to worry about
-    someone listening."'
+  - '*Vin sits alone upon the step into the house, lost in thought. He sees you turn
+    to him, seeing the pain etched into your eyes* '
+  - '"Hey, Jani''s already inside, asked to be left alone. How are you holding up?"'
+  - '*You tell him of all that has happened in the past few days, the shock, the
+    autopsy, the feeling of failure and helplessness. Before you even needed to say
+    a thing he had already read all of this from a single look*'
+  - '"And the memorial? How''s the setup progress been?"'
+  - "*You tell that it's just going. Its a process that needs to be done*\t\t "
+  - "\"Alright, I think it is time I leave. I'm going to relax here for a moment
+    longer before I have to leave.\"\t"
+  - '"Christiaan, don''t forget, Duncan''s choices were his own, he chose the path
+    he followed. A part of him is still with you, don''t lose yourself chasing what
+    you believe to be more of him. It won''t be." '
   repeatDialogueLines:
-  - '"Have you found a way to get us outside?"'
+  - '"Don''t forget to check in Duncan''s room for the memorial, you might something
+    worth taking with you for it."'
   turnDuration: 0.8
   npcForwardOffset: 0
   onDialogueComplete:
@@ -4470,6 +4469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
   requireObjectivesComplete: 1
   nextSceneName: GryBxDvlpmnt 1-4
+  transitionDelay: 2
 --- !u!65 &1885553637
 BoxCollider:
   m_ObjectHideFlags: 0
