@@ -23,11 +23,20 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lookInput;
     private float verticalVelocity;
     private float cameraPitch;
+    private Vector3 cameraStartLocalPos;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         controls = new PlayerControls();
+        cameraStartLocalPos = cameraTransform.localPosition;
+    }
+
+    public void ResetCamera()
+    {
+        cameraPitch = 0f;
+        cameraTransform.localPosition = cameraStartLocalPos;
+        cameraTransform.localRotation = Quaternion.identity;
     }
 
     private void OnEnable()

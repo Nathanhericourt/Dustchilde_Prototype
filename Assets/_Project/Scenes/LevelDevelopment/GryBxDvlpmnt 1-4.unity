@@ -5598,11 +5598,19 @@ PrefabInstance:
       value: Leave the house out by the kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].description
       value: Talk to Jacob in the kitchen ahead
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].description
+      value: Find 2 Items to move the crowds
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].description
       value: Talk to Vin in the garage where you started
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -5610,11 +5618,35 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].progressNeeded
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 863352255}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3431221}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3431221}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -5622,8 +5654,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BlockerWall, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5243290701151351870, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: dialogueText
@@ -5698,6 +5746,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+--- !u!1 &863352255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5123903157111089196, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+  m_PrefabInstance: {fileID: 863352254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &864196068 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2509592543395724253, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
@@ -8832,8 +8885,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1917346931}
         m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
-        m_MethodName: CompleteCurrentStep
-        m_Mode: 1
+        m_MethodName: CompleteStepIfCurrent
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10488,7 +10541,19 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
   onUsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917346931}
+        m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+        m_MethodName: AddProgressToStep
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1431406527
 GameObject:
   m_ObjectHideFlags: 0
@@ -13322,7 +13387,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
   m_PrefabInstance: {fileID: 863352254}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 863352255}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ade9ad1bf1a214041859001e36b3f909, type: 3}
@@ -13461,7 +13526,19 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: cad2b37bd15138b48840716d477fede1, type: 3}
   onUsed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917346931}
+        m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+        m_MethodName: AddProgressToStep
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1932010055
 GameObject:
   m_ObjectHideFlags: 0
@@ -14686,12 +14763,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1917346931}
         m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
-        m_MethodName: CompleteCurrentStep
-        m_Mode: 1
+        m_MethodName: CompleteStepIfCurrent
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

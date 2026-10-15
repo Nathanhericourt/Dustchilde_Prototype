@@ -17,6 +17,9 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)] [SerializeField] private float sfxVolume = 1f;
     [Range(0f, 1f)] [SerializeField] private float musicVolume = 0.5f;
 
+    [Header("UI Sounds")]
+    [SerializeField] private AudioClip uiClickSound;
+
     private void Start()
     {
         if (backgroundMusic != null)
@@ -42,6 +45,11 @@ public class AudioManager : MonoBehaviour
     {
         if (clip == null || sfxSource == null) return;
         sfxSource.PlayOneShot(clip, sfxVolume);
+    }
+
+    public void PlayUIClick()
+    {
+        PlaySFX(uiClickSound);
     }
 
     // Calls this to start/chnage background/ambient music

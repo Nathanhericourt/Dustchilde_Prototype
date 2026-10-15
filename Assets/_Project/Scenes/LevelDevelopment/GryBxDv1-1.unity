@@ -3218,7 +3218,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3945262851203400583, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 988103697}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3672890353684642211, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160720304}
+    - targetCorrespondingSourceObject: {fileID: 2189478986478671634, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160720303}
+    - targetCorrespondingSourceObject: {fileID: 5285811597718533133, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160720302}
+    - targetCorrespondingSourceObject: {fileID: 5595137916084626661, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160720301}
   m_SourcePrefab: {fileID: 100100000, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
 --- !u!114 &700416681 stripped
 MonoBehaviour:
@@ -5528,6 +5540,10 @@ PrefabInstance:
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 700416682}
+    - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: uiClickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ef0bbb1bfcbd7f448e203c748c9af27, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6570,6 +6586,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1160720297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5595137916084626661, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 700416680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160720298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5285811597718533133, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 700416680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160720299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2189478986478671634, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 700416680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1160720300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3672890353684642211, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 700416680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1160720301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160720297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a98245c38941894bba06e358d612a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
+--- !u!114 &1160720302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160720298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a98245c38941894bba06e358d612a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
+--- !u!114 &1160720303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160720299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a98245c38941894bba06e358d612a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
+--- !u!114 &1160720304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160720300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a98245c38941894bba06e358d612a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickSound
 --- !u!1001 &1205752069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9770,7 +9854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

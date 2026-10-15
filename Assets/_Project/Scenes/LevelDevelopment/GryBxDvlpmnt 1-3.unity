@@ -1935,6 +1935,10 @@ PrefabInstance:
       propertyPath: openAngle
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2003033560998825401, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
+      propertyPath: startsLocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3215044592077676724, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -4470,6 +4474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
   requireObjectivesComplete: 1
   nextSceneName: GryBxDvlpmnt 1-4
+  transitionDelay: 2
 --- !u!65 &1885553637
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class ObjectiveManager : MonoBehaviour
 
     public bool AllComplete => allComplete;
     public int CurrentStepIndex => currentStepIndex;
+    private int[] storedProgress;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class ObjectiveManager : MonoBehaviour
             return;
         }
         Instance = this;
+        storedProgress = new int[steps.Length];
     }
 
     private void Start()
@@ -82,9 +84,16 @@ public class ObjectiveManager : MonoBehaviour
 
         // Move on to the next step first, then run the finished step's events
         currentStepIndex++;
-        currentProgress = 0;
+        currentProgress = (currentStepIndex < steps.Length) ? storedProgress[currentStepIndex] : 0;
 
         finishedStep.onStepComplete?.Invoke();
+
+        // If the new step was already done in advance, finish it straight away
+        if (currentStepIndex < steps.Length && steps[currentStepIndex].progressNeeded > 0 &&
+            currentProgress >= steps[currentStepIndex].progressNeeded)
+        {
+            CompleteCurrentStep();
+        }
 
         if (currentStepIndex >= steps.Length)
         {
@@ -96,6 +105,16 @@ public class ObjectiveManager : MonoBehaviour
             ShowCurrentStep();
         }
 
+    }
+
+    public void CompleteStepIfCurrent(int stepIndex)
+    {
+        if (stepIndex == currentStepIndex) CompleteCurrentStep();
+    }
+
+    public void AddProgressIfCurrent(int stepIndex)
+    {
+        if (stepIndex == currentStepIndex) AddProgress();
     }
 
     public bool IsCurrentStep(int index)
@@ -116,6 +135,20 @@ public class ObjectiveManager : MonoBehaviour
         else
         {
             objectiveText.text = step.description;
+        }
+    }
+
+    public void AddProgressToStep(int stepIndex)
+    {
+        if (stepIndex < 0 || stepIndex >= steps.Length) return;
+
+        if (stepIndex == currentStepIndex)
+        {
+            AddProgress();
+        }
+        else if (stepIndex > currentStepIndex)
+        {
+            storedProgress[stepIndex]++;   // saved until that step starts
         }
     }
 
