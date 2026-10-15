@@ -14621,6 +14621,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.87626
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.87626
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.87626
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.471739
       objectReference: {fileID: 0}
@@ -14659,6 +14671,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ce9a1cdd6f063ae4a87a3d19a474bbad, type: 3}
       propertyPath: m_Name
@@ -14742,8 +14758,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   speakerName: Vin
-  dialogueLines: []
-  repeatDialogueLines: []
+  dialogueLines:
+  - '*You spot Vin relaxing in the garage away from the noise. He sees you approach
+    him*'
+  - '"Hey, you holding up okay? What''s going on?"'
+  - '*You explain to him what Jacob just said to you, and that he needs to find a
+    way of getting him away from the crowd while they''re distracted.*'
+  - '"Well, we were already planning on cutting a cake later tonight, might be worth
+    using that to do that."'
+  - '"I left the cake in your bedroom, in the corner of the room. You''ll also need
+    a knife as its quite a thick cake."'
+  - '"If you can use it to get the attention of the larger crowds who might see you
+    two to the dining table it should buy you some time alone with him"'
+  repeatDialogueLines:
+  - '"Were you able to find everything? Don''t forget the cake is in your bedroom,
+    in the corner as well as a knife. Look for the biggest groups and use them to
+    move the groups away."'
   turnDuration: 0.8
   npcForwardOffset: 0
   onDialogueComplete:
