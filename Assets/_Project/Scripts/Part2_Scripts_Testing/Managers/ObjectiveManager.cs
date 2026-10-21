@@ -22,6 +22,9 @@ public class ObjectiveManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI objectiveText;
 
+    [Tooltip("If true, the objective HUD stays hidden until RevealObjectiveText() is called (e.g. after an intro cutscene).")]
+    [SerializeField] private bool hideUntilRevealed;
+
     [Header("Objective Steps")]
     [SerializeField] private ObjectiveStep[] steps;
 
@@ -52,6 +55,19 @@ public class ObjectiveManager : MonoBehaviour
         currentStepIndex = 0;
         currentProgress = 0;
 
+        ShowCurrentStep();
+
+        if (hideUntilRevealed && objectiveText != null)
+        {
+            objectiveText.gameObject.SetActive(false);
+        }
+    }
+
+    public void RevealObjectiveText()
+    {
+        if (objectiveText == null) return;
+
+        objectiveText.gameObject.SetActive(true);
         ShowCurrentStep();
     }
 

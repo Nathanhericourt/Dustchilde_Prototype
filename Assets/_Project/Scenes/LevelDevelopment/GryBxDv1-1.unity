@@ -2403,6 +2403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515248495}
   - component: {fileID: 515248494}
+  - component: {fileID: 515248496}
   m_Layer: 0
   m_Name: Cutscene
   m_TagString: Untagged
@@ -2462,6 +2463,34 @@ Transform:
   - {fileID: 245514702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515248496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515248493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a41e6b7d2f4a9e8c5b1d3f6a0e92c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneEndRelay
+  director: {fileID: 515248494}
+  onCutsceneStopped:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 965667182}
+        m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
+        m_MethodName: RevealObjectiveText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &523092984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3179,6 +3208,10 @@ PrefabInstance:
     - target: {fileID: 6198749626980660795, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999977952302261781, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7309649563973432676, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -5398,6 +5431,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: hideUntilRevealed
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
