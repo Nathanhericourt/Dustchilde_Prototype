@@ -10725,31 +10725,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00071130146
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8468202
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11067298
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.99546266
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.06083889
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0714482
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.015747314
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243291794505981170, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4026330680224659795, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       propertyPath: interactPromptText
@@ -10772,6 +10780,9 @@ PrefabInstance:
     - {fileID: 2013645691757665853, guid: dc95897940345ba49b7b950de8533a52, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6622920406556846545, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2081280527}
     - targetCorrespondingSourceObject: {fileID: 2313698483299392370, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2079640463}
@@ -10815,6 +10826,81 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!20 &2079640466 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1455646619583760156, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+  m_PrefabInstance: {fileID: 2079640461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2081280521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6622920406556846545, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+  m_PrefabInstance: {fileID: 2079640461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2081280525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2817339885477170149, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+  m_PrefabInstance: {fileID: 2079640461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081280521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47678c4809039c2448b0a21e69cedee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+--- !u!114 &2081280527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081280521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 1976ac878da208d4b92ab28f0cf01bd4, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2079640463}
+          m_TargetAssemblyTypeName: Cinemachine.CinemachineBrain, Cinemachine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2081280525}
+          m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+          m_MethodName: ResetCamera
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2079640466}
+          m_TargetAssemblyTypeName: UnityEngine.Camera, UnityEngine
+          m_MethodName: set_fieldOfView
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &2090922235
 PrefabInstance:
   m_ObjectHideFlags: 0
