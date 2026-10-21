@@ -13,6 +13,8 @@ public class LevelEndTrigger : MonoBehaviour
     [Tooltip("Time to wait in seconds before loading the next scene.")]
     [SerializeField] private float transitionDelay = 2.0f;
 
+    [SerializeField] private GameObject transitionPanel;
+
     private bool hasTriggered;
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +29,11 @@ public class LevelEndTrigger : MonoBehaviour
         }
 
         hasTriggered = true;
+
+        if (transitionPanel != null)
+        {
+            transitionPanel.SetActive(true);
+        }
 
         if (!string.IsNullOrEmpty(nextSceneName))
         {

@@ -8282,6 +8282,14 @@ PrefabInstance:
       value: GryBxDvlpmnt 1-3
       objectReference: {fileID: 0}
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
+      propertyPath: transitionDelay
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
+      propertyPath: transitionPanel
+      value: 
+      objectReference: {fileID: 1801946918}
+    - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: requireObjectivesComplete
       value: 0
       objectReference: {fileID: 0}
@@ -9511,6 +9519,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1801946918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5196620553243584159, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 700416680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805497692
 GameObject:
   m_ObjectHideFlags: 0

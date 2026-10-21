@@ -4031,6 +4031,11 @@ Transform:
   - {fileID: 945979321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1435715832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5196620553243584159, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 328889472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1518916273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4772106760553381115, guid: d68a8a2ceba2ab843afe6948218ff3b0, type: 3}
@@ -4473,7 +4478,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
   requireObjectivesComplete: 1
   nextSceneName: GryBxDvlpmnt 1-4
-  transitionDelay: 2
+  transitionDelay: 12
+  transitionPanel: {fileID: 1435715832}
 --- !u!65 &1885553637
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -693,6 +693,11 @@ NavMeshAgent:
   m_BaseOffset: 0.99999994
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &31286937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5196620553243584159, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+  m_PrefabInstance: {fileID: 685286177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &52989640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,6 +3215,14 @@ PrefabInstance:
       propertyPath: nextSceneName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
+      propertyPath: transitionDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
+      propertyPath: transitionPanel
+      value: 
+      objectReference: {fileID: 31286937}
     - target: {fileID: 5984629218155701089, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: m_LocalScale.x
       value: 9
