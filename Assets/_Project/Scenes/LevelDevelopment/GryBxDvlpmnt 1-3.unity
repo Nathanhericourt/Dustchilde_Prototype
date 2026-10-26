@@ -1188,6 +1188,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5705268520352383713, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_text
+      value: 'If you are struggling, you are not alone.
+
+        Support is available.
+
+
+
+        Suicide
+        Crisis Line
+
+        0800 567 567'
+      objectReference: {fileID: 0}
     - target: {fileID: 6198749626980660795, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4478,7 +4491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
   requireObjectivesComplete: 1
   nextSceneName: GryBxDvlpmnt 1-4
-  transitionDelay: 12
+  transitionDelay: 30
   transitionPanel: {fileID: 1435715832}
 --- !u!65 &1885553637
 BoxCollider:

@@ -3205,6 +3205,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5705268520352383713, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
+      propertyPath: m_text
+      value: 'If you are struggling, you are not alone.
+
+        Support is available.
+
+
+
+        Suicide
+        Crisis Line
+
+        0800 567 567'
+      objectReference: {fileID: 0}
     - target: {fileID: 6198749626980660795, guid: 3377ddb179e1b234f89963dc8555b62d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8283,7 +8296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: transitionDelay
-      value: 12
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: transitionPanel
