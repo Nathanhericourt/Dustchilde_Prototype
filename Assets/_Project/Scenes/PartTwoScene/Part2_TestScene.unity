@@ -537,6 +537,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa9bbb6edab26e48bd0ea23bb10ee7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrowdMoveTrigger
+  onUsed:
+    m_PersistentCalls:
+      m_Calls: []
   itemName: Food Tray
   targetMovers:
   - {fileID: 965259062}
@@ -4833,6 +4836,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132875468}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &239279792015288838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.42972746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9029587
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -129.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852037063487704206, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088684373816304849, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
+      propertyPath: m_Name
+      value: Sad Idle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4afe200831d4b62449dc43eb503fa349, type: 3}
 --- !u!1001 &456984229136303538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5828,3 +5888,4 @@ SceneRoots:
   - {fileID: 1666921119}
   - {fileID: 1147292204}
   - {fileID: 1778688037}
+  - {fileID: 239279792015288838}
