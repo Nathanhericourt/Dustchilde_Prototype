@@ -4925,7 +4925,7 @@ Light:
   serializedVersion: 13
   m_Type: 0
   m_Color: {r: 0.990566, g: 0.9274492, b: 0.5093005, a: 1}
-  m_Intensity: 12.63
+  m_Intensity: 18.2
   m_Range: 11.673126
   m_SpotAngle: 179
   m_InnerSpotAngle: 123.22415
@@ -6237,11 +6237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].description
-      value: Find 2 Items to move the crowds
+      value: Talk to Vin in the Garage
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].description
-      value: Talk to Vin in the garage where you started
+      value: Find the 2 Items to move the crowds
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].progressNeeded
@@ -6249,6 +6249,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].progressNeeded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].progressNeeded
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -6261,10 +6265,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -6280,11 +6288,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3431221}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 827722416}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -6296,11 +6312,23 @@ PrefabInstance:
       value: Open
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BlockerWall, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorHinge, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: steps.Array.data[2].onStepComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5243290701151351870, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
@@ -10766,7 +10794,7 @@ Transform:
   m_GameObject: {fileID: 1345208290}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 37.71, y: -0.172, z: -20.49}
+  m_LocalPosition: {x: 37.71, y: -0.172, z: -21.71}
   m_LocalScale: {x: 1, y: 0.58038205, z: 0.23851001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10812,7 +10840,7 @@ Light:
   serializedVersion: 13
   m_Type: 0
   m_Color: {r: 1, g: 0.96949035, b: 0.7607843, a: 1}
-  m_Intensity: 12.63
+  m_Intensity: 23.4
   m_Range: 11.673126
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -11378,7 +11406,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14611,7 +14639,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -15962,18 +15990,6 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 827722416}
-        m_TargetAssemblyTypeName: DoorHinge, Assembly-CSharp
-        m_MethodName: Unlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1917346931}
         m_TargetAssemblyTypeName: ObjectiveManager, Assembly-CSharp
         m_MethodName: CompleteStepIfCurrent
@@ -15981,7 +15997,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16196,8 +16212,8 @@ Light:
   serializedVersion: 13
   m_Type: 0
   m_Color: {r: 1, g: 0.96949035, b: 0.7607843, a: 1}
-  m_Intensity: 12.63
-  m_Range: 11.673126
+  m_Intensity: 22.2
+  m_Range: 19.4
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
