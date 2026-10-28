@@ -2491,6 +2491,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2081280528}
+        m_TargetAssemblyTypeName: LookDetector, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &523092984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5444,7 +5456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: hideUntilRevealed
@@ -5452,11 +5464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].description
-      value: Walk to the car with WASD
+      value: Look around with your Mouse
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[1].description
-      value: Leave graveyard
+      value: Walk to the car with WASD
       objectReference: {fileID: 0}
     - target: {fileID: 4194575282474187045, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: steps.Array.data[0].progressNeeded
@@ -9957,7 +9969,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10858,6 +10870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6622920406556846545, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2081280527}
+    - targetCorrespondingSourceObject: {fileID: 6622920406556846545, guid: dc95897940345ba49b7b950de8533a52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2081280528}
     - targetCorrespondingSourceObject: {fileID: 2313698483299392370, guid: dc95897940345ba49b7b950de8533a52, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2079640463}
@@ -10976,6 +10991,21 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &2081280528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081280521}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f677a31fba515c438a3bf58415a4099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LookDetector
+  stepIndex: 0
+  lookThreshold: 150
+  startDelay: 1
 --- !u!1001 &2090922235
 PrefabInstance:
   m_ObjectHideFlags: 0
