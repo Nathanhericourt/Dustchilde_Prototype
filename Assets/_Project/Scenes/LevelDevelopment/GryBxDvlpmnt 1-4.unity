@@ -3489,7 +3489,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: nextSceneName
-      value: 
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 276025588569404696, guid: 4be25bdf2beb7f04c966bfb7e02e0dac, type: 3}
       propertyPath: transitionDelay

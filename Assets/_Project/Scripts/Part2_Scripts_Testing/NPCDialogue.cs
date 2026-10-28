@@ -17,6 +17,9 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     [SerializeField] private float turnDuration = 0.8f;
     [SerializeField] private float npcForwardOffset = 0f; // adjust if model doesn't face its own +Z
 
+    [Tooltip("Optional. A point on the NPC's head. The player's camera tilts to look at it. Leave empty to look straight ahead.")]
+    [SerializeField] private Transform lookTarget;
+
     [Header("On Conversation Finished")]
     [Tooltip("Runs every time this NPC's dialogue finishes (initial or repeat). Drag in a DoorHinge > Unlock() to gate a door behind this conversation.")]
     [SerializeField] private UnityEvent onDialogueComplete;
@@ -71,7 +74,13 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         Quaternion npcTargetRot = Quaternion.Euler(npcStartEuler.x, npcTargetYaw, npcStartEuler.z);
 
         float startPitch = playerMovement != null ? playerMovement.CameraPitch : 0f;
-        const float targetPitch = 0f; // level, eye-line straight ahead
+        float targetPitch = 0f;
+        if (lookTarget != null && Camera.main != null)
+        {
+            Vector3 toTarget = lookTarget.position - Camera.main.transform.position;
+            float flatDistance = new Vector2(toTarget.x, toTarget.z).magnitude;
+            targetPitch = -Mathf.Atan2(toTarget.y, flatDistance) * Mathf.Rad2Deg;
+        }
 
         float elapsed = 0f;
         while (elapsed < turnDuration)
