@@ -5608,7 +5608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: musicVolume
-      value: 0.5
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: uiClickSound

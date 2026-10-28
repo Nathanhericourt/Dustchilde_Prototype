@@ -6400,6 +6400,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 685286181}
     - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: sfxVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
+      propertyPath: musicVolume
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666686081295442378, guid: 014e0de1149c45d4eacd1b913de98557, type: 3}
       propertyPath: uiClickSound
       value: 
       objectReference: {fileID: 8300000, guid: 2ef0bbb1bfcbd7f448e203c748c9af27, type: 3}
@@ -7572,7 +7580,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001717034}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
