@@ -21,10 +21,13 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     [SerializeField] private Transform lookTarget;
 
     [Header("On Conversation Finished")]
+    [Tooltip("If ticked, the event below only runs the first time this conversation finishes. Repeat chats won't run it again.")]
+    [SerializeField] private bool eventOnlyOnFirstConversation = true;
     [Tooltip("Runs every time this NPC's dialogue finishes (initial or repeat). Drag in a DoorHinge > Unlock() to gate a door behind this conversation.")]
     [SerializeField] private UnityEvent onDialogueComplete;
 
     private bool hasSpokenBefore;
+    private bool hasFiredEvent;
     private bool isTurning;
     private Transform playerTransform;
     private PlayerMovement playerMovement;
@@ -109,7 +112,16 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
         hasSpokenBefore = true;
 
-        DialogueManager.Instance.StartDialogue(speakerName, linesToUse, () => onDialogueComplete.Invoke());
+        DialogueManager.Instance.StartDialogue(speakerName, linesToUse, OnConversationFinished);
+
+    }
+
+    private void OnConversationFinished()
+    {
+        if (eventOnlyOnFirstConversation && hasFiredEvent) return;
+
+        hasFiredEvent = true;
+        onDialogueComplete.Invoke();
     }
 
     public string GetInteractPrompt()
