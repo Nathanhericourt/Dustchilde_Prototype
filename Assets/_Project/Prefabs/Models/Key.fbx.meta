@@ -8,12 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Key Ring
-    second: {fileID: 2100000, guid: 722bd6b83dc8ad74fafdc5d3d32d37f1, type: 2}
+    second: {fileID: 2100000, guid: 1d72400a80d955743a25b2ce391e1d69, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Key neck
-    second: {fileID: 2100000, guid: d056ac398017a8e4d9eb966bc196ec7b, type: 2}
+    second: {fileID: 2100000, guid: 0f5e85b9c7854b34ebef834f19e0f106, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: KeyMat
+    second: {fileID: 2800000, guid: 1fdcd426c4add84448eb7720bcf56317, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
